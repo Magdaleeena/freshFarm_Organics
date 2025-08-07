@@ -7,11 +7,11 @@ import com.fasterxml.jackson.databind.SerializationFeature;
 import java.io.File;
 import java.util.*;
 
-public class VegBoxTransformer {
+public class ProductTransformer {
     public static void main(String[] args) throws Exception {
         ObjectMapper mapper = new ObjectMapper();
         List<Map<String, Object>> products = mapper.readValue(
-                new File("vegbox_products.json"),
+                new File("freshFarm_products.json"),
                 new TypeReference<List<Map<String, Object>>>() {}
         );
 
@@ -65,8 +65,8 @@ public class VegBoxTransformer {
 
         // Write transformed data to new JSON file
         mapper.enable(SerializationFeature.INDENT_OUTPUT);
-        mapper.writeValue(new File("vegbox_products_db.json"), dbProducts);
+        mapper.writeValue(new File("freshFarm_products_db.json"), dbProducts);
 
-        System.out.println("Transformation complete! See vegbox_products_db.json");
+        System.out.println("Transformation complete! See freshFarm_products_db.json");
     }
 }
