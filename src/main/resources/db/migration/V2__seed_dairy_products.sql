@@ -17,7 +17,7 @@ INSERT INTO products (product_name, unit_price, unit_value, unit_type, category,
 ('Red Leicester Cheese (200g)', 8.50, 0.2, 'kg', 'cheese', 'Classic Red Leicester cheese, 200g block', 'https://www.thecourtyarddairy.co.uk/app/uploads/sparkenhoe-vintage-red-leicester-cheese.jpg'),
 ('Goat cheese (200g)', 2.70, 0.2, 'kg', 'cheese', 'Goat Milk Gouda, 200g block', 'https://www.thecourtyarddairy.co.uk/app/uploads/killeen-goats-cheese-gouda.jpg'),
 ('Brie Cheese (200g)', 2.80, 0.2, 'kg', 'cheese', 'Soft Brie Cheese, 200g block', 'https://www.thecourtyarddairy.co.uk/app/uploads/baron-bigod-brie-cheese-460x460.jpg'),
-('Devon Blue Cheese (200g)', 3.00, 0.2, 'kg', 'cheese', 'British Devon Blue cheese, 200g block', 'https://www.thecourtyarddairy.co.uk/app/uploads/devon-blue-cheese-1-460x460.jpg'),
+('Devon Blue Cheese (200g)', 3.00, 0.2, 'kg', 'cheese', 'British Devon Blue cheese, 200g block', 'https://www.thecourtyarddairy.co.uk/app/uploads/devon-blue-cheese-1-460x460.jpg');
 
 -- YOGHURT
 INSERT INTO products (product_name, unit_price, unit_value, unit_type, category, description, image_url) VALUES
