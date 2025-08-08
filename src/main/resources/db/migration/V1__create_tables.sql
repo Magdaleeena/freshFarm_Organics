@@ -6,13 +6,15 @@ DROP TABLE IF EXISTS products CASCADE;
 DROP TABLE IF EXISTS customers CASCADE;
 
 CREATE TABLE customers (
-    customer_id BIGSERIAL PRIMARY KEY,
-    customer_name VARCHAR(100) NOT NULL,
+    customer_id VARCHAR(255) PRIMARY KEY,
+    forename VARCHAR(255) NOT NULL,
+    surname VARCHAR(255) NOT NULL,
     address_line1 VARCHAR(200),
-    address_city VARCHAR(100),
-    address_postcode VARCHAR(20),
-    email_address VARCHAR(100),
-    phone_number VARCHAR(20)
+    town_city VARCHAR(100),
+    country VARCHAR(255) NOT NULL,
+    postcode VARCHAR(20) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    phone_number VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE products (
@@ -28,7 +30,7 @@ CREATE TABLE products (
 
 CREATE TABLE orders (
     order_id BIGSERIAL PRIMARY KEY,
-    customer_id BIGINT NOT NULL,
+    customer_id VARCHAR(255) NOT NULL,
     order_date DATE NOT NULL,
     order_items JSON NOT NULL,  -- e.g. [{"product_id":1,"qty":2},{"product_id":3,"qty":1}]
     total_amount DECIMAL(10,2) NOT NULL,
