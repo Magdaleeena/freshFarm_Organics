@@ -1,0 +1,201 @@
+[ {
+  "unitPrice" : "£1.16",
+  "imageUrl" : "https://thevegboxcompany.co.uk/wp-content/uploads/2021/04/IMG_6708_1500-300x300.jpg",
+  "category" : "fruit",
+  "productName" : "Apple Golden Delicious"
+}, {
+  "unitPrice" : "£1.16",
+  "imageUrl" : "https://thevegboxcompany.co.uk/wp-content/uploads/2021/04/IMG_6712_1500-300x300.jpg",
+  "category" : "fruit",
+  "productName" : "Apple Granny Smith"
+}, {
+  "unitPrice" : "£1.16",
+  "imageUrl" : "https://thevegboxcompany.co.uk/wp-content/uploads/2021/04/IMG_6710_1500-300x300.jpg",
+  "category" : "fruit",
+  "productName" : "Apple Red Chief"
+}, {
+  "unitPrice" : "£1.16",
+  "imageUrl" : "https://thevegboxcompany.co.uk/wp-content/uploads/2021/04/IMG_6711_1500-300x300.jpg",
+  "category" : "fruit",
+  "productName" : "Apple Royal Gala"
+}, {
+  "unitPrice" : "£0.53",
+  "imageUrl" : "https://thevegboxcompany.co.uk/wp-content/uploads/2021/04/IMG_6764_1500-300x300.jpg",
+  "category" : "fruit",
+  "productName" : "Bananas"
+}, {
+  "unitPrice" : "£3.78",
+  "imageUrl" : "https://thevegboxcompany.co.uk/wp-content/uploads/2021/04/IMG_8004-300x300.jpg",
+  "category" : "fruit",
+  "productName" : "Blackberries"
+}, {
+  "unitPrice" : "£3.15",
+  "imageUrl" : "https://thevegboxcompany.co.uk/wp-content/uploads/2021/04/IMG_6841_1500-300x300.jpg",
+  "category" : "fruit",
+  "productName" : "Blueberries"
+}, {
+  "unitPrice" : "£2.68",
+  "imageUrl" : "https://thevegboxcompany.co.uk/wp-content/uploads/2022/02/IMG_7569-300x300.jpg",
+  "category" : "fruit",
+  "productName" : "Bramley Apples"
+}, {
+  "unitPrice" : "£2.95",
+  "imageUrl" : "https://thevegboxcompany.co.uk/wp-content/uploads/2021/04/IMG_6838_1500-300x300.jpg",
+  "category" : "fruit",
+  "productName" : "British Strawberries"
+}, {
+  "unitPrice" : "£1.94",
+  "imageUrl" : "https://thevegboxcompany.co.uk/wp-content/uploads/2021/04/IMG_6885_600-300x300.jpg",
+  "category" : "fruit",
+  "productName" : "Conference Pears"
+}, {
+  "unitPrice" : "£3.15",
+  "imageUrl" : "https://thevegboxcompany.co.uk/wp-content/uploads/2021/04/IMG_6895_600-300x300.jpg",
+  "category" : "fruit",
+  "productName" : "Grape Black"
+}, {
+  "unitPrice" : "£3.15",
+  "imageUrl" : "https://thevegboxcompany.co.uk/wp-content/uploads/2021/04/IMG_6890_600-300x300.jpg",
+  "category" : "fruit",
+  "productName" : "Grape Green"
+}, {
+  "unitPrice" : "£4.15",
+  "imageUrl" : "https://thevegboxcompany.co.uk/wp-content/uploads/2021/04/IMG_6740_1500-300x300.jpg",
+  "category" : "fruit",
+  "productName" : "Honeydew Melon"
+}, {
+  "unitPrice" : "£2.99",
+  "imageUrl" : "https://thevegboxcompany.co.uk/wp-content/uploads/2021/04/IMG_6720_1500-300x300.jpg",
+  "category" : "fruit",
+  "productName" : "Kiwi"
+}, {
+  "unitPrice" : "£1.00",
+  "imageUrl" : "https://thevegboxcompany.co.uk/wp-content/uploads/2021/04/IMG_6714_1500-300x300.jpg",
+  "category" : "fruit",
+  "productName" : "Lemons"
+}, {
+  "unitPrice" : "£1.00",
+  "imageUrl" : "https://thevegboxcompany.co.uk/wp-content/uploads/2021/04/IMG_6718_1500-300x300.jpg",
+  "category" : "fruit",
+  "productName" : "Limes"
+}, {
+  "unitPrice" : "£5.83",
+  "imageUrl" : "https://thevegboxcompany.co.uk/wp-content/uploads/2021/04/IMG_6732_1500-300x300.jpg",
+  "category" : "vegetable",
+  "productName" : "Asparagus"
+}, {
+  "unitPrice" : "£1.84",
+  "imageUrl" : "https://thevegboxcompany.co.uk/wp-content/uploads/2022/10/IMG_9530-300x300.jpg",
+  "category" : "vegetable",
+  "productName" : "Aubergine"
+}, {
+  "unitPrice" : "£1.68",
+  "imageUrl" : "https://thevegboxcompany.co.uk/wp-content/uploads/2022/11/IMG_7099_1500-300x300.jpg",
+  "category" : "vegetable",
+  "productName" : "Banana Shallots"
+}, {
+  "unitPrice" : "£2.10",
+  "imageUrl" : "https://thevegboxcompany.co.uk/wp-content/uploads/2021/04/IMG_6760_1500-300x300.jpg",
+  "category" : "vegetable",
+  "productName" : "Bean Fine Loose"
+}, {
+  "unitPrice" : "£1.10",
+  "imageUrl" : "https://thevegboxcompany.co.uk/wp-content/uploads/2021/04/IMG_6892_600-300x300.jpg",
+  "category" : "vegetable",
+  "productName" : "Beetroot Raw"
+}, {
+  "unitPrice" : "£2.31",
+  "imageUrl" : "https://thevegboxcompany.co.uk/wp-content/uploads/2023/03/IMG_6759-300x300.jpg",
+  "category" : "vegetable",
+  "productName" : "British Tomatoes"
+}, {
+  "unitPrice" : "£1.95",
+  "imageUrl" : "https://thevegboxcompany.co.uk/wp-content/uploads/2021/04/IMG_6737_1500-300x300.jpg",
+  "category" : "vegetable",
+  "productName" : "Broccoli"
+}, {
+  "unitPrice" : "£0.58",
+  "imageUrl" : "https://thevegboxcompany.co.uk/wp-content/uploads/2021/04/IMG_6762_1500-300x300.jpg",
+  "category" : "vegetable",
+  "productName" : "Brown onion"
+}, {
+  "unitPrice" : "£2.47",
+  "imageUrl" : "https://thevegboxcompany.co.uk/wp-content/uploads/2021/04/IMG_6832_1500-300x300.jpg",
+  "category" : "vegetable",
+  "productName" : "Butternut Squash"
+}, {
+  "unitPrice" : "£1.21",
+  "imageUrl" : "https://thevegboxcompany.co.uk/wp-content/uploads/2021/04/IMG_6767_1500-300x300.jpg",
+  "category" : "vegetable",
+  "productName" : "Carrot"
+}, {
+  "unitPrice" : "£2.95",
+  "imageUrl" : "https://thevegboxcompany.co.uk/wp-content/uploads/2021/04/IMG_6756_1500-300x300.jpg",
+  "category" : "vegetable",
+  "productName" : "Cauliflower"
+}, {
+  "unitPrice" : "£1.16",
+  "imageUrl" : "https://thevegboxcompany.co.uk/wp-content/uploads/2021/04/IMG_7868-1500-300x300.jpg",
+  "category" : "vegetable",
+  "productName" : "Celeriac"
+}, {
+  "unitPrice" : "£1.89",
+  "imageUrl" : "https://thevegboxcompany.co.uk/wp-content/uploads/2021/04/IMG_7531-300x300.jpg",
+  "category" : "vegetable",
+  "productName" : "Chestnut Mushrooms"
+}, {
+  "unitPrice" : "£1.05",
+  "imageUrl" : "https://thevegboxcompany.co.uk/wp-content/uploads/2023/02/IMG_7815-300x300.jpg",
+  "category" : "vegetable",
+  "productName" : "Cooked Beetroot"
+}, {
+  "unitPrice" : "£2.31",
+  "imageUrl" : "https://thevegboxcompany.co.uk/wp-content/uploads/2022/11/IMG_7324_1500-300x300.jpg",
+  "category" : "vegetable",
+  "productName" : "Corn on the cob"
+}, {
+  "unitPrice" : "£2.57",
+  "imageUrl" : "https://thevegboxcompany.co.uk/wp-content/uploads/2021/02/Courgette-300x300.jpg",
+  "category" : "vegetable",
+  "productName" : "Courgette"
+}, {
+  "unitPrice" : "£29.50",
+  "imageUrl" : "https://thevegboxcompany.co.uk/wp-content/uploads/2024/03/81NzgSuHHL-300x300.jpg",
+  "category" : "packageBox",
+  "productName" : "Essentials Fruit, Vegetable and Salad Box"
+}, {
+  "unitPrice" : "£28.50",
+  "imageUrl" : "https://thevegboxcompany.co.uk/wp-content/uploads/2024/11/eb210ac04e9b4795845ac1addf5780397Etplv-tulkllf4y5-resize-jpeg3A3003A300.jpeg",
+  "category" : "packageBox",
+  "productName" : "Fresh Fruit and Veg Box From Farm To Fork"
+}, {
+  "unitPrice" : "£23.95",
+  "imageUrl" : "https://thevegboxcompany.co.uk/wp-content/uploads/2023/06/IMG_0008-300x300.jpg",
+  "category" : "packageBox",
+  "productName" : "The Essentials Fruit and Salad Box"
+}, {
+  "unitPrice" : "£39.50",
+  "imageUrl" : "https://thevegboxcompany.co.uk/wp-content/uploads/2022/05/IMG_9490_1500-300x300.jpg",
+  "category" : "packageBox",
+  "productName" : "The Family Mixed Box"
+}, {
+  "unitPrice" : "£98.95",
+  "imageUrl" : "https://thevegboxcompany.co.uk/wp-content/uploads/2023/03/IMG_8164-300x300.jpg",
+  "category" : "packageBox",
+  "productName" : "The Jumbo Mixed Box"
+}, {
+  "unitPrice" : "£52.50",
+  "imageUrl" : "https://thevegboxcompany.co.uk/wp-content/uploads/2020/01/Medium-Mixed-Box-1500-300x300.jpg",
+  "category" : "packageBox",
+  "productName" : "The Medium Mixed Box"
+}, {
+  "unitPrice" : "£24.95",
+  "imageUrl" : "https://thevegboxcompany.co.uk/wp-content/uploads/2020/11/Small-Mixed-Box-1500-300x300.jpg",
+  "category" : "packageBox",
+  "productName" : "The Small Mixed Box"
+}, {
+  "unitPrice" : "£27.95",
+  "imageUrl" : "https://thevegboxcompany.co.uk/wp-content/uploads/2025/06/pt5sjfoi0ii-300x300.jpg",
+  "category" : "packageBox",
+  "productName" : "The Summer Mixed Fruit, Veg And Salad Box"
+} ]
