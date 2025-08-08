@@ -7,21 +7,30 @@ import org.springframework.boot.CommandLineRunner;
 import com.example.freshFarm.service.DataLoaderService;
 
 @SpringBootApplication
-public class FreshFarmApplication implements CommandLineRunner {
-	private final DataLoaderService dataLoaderService;
-
-	@Autowired
-	public FreshFarmApplication(DataLoaderService dataLoaderService) {
-		this.dataLoaderService = dataLoaderService;
-	}
+public class FreshFarmApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(FreshFarmApplication.class, args);
 	}
-
-	@Override
-	public void run(String... args) throws Exception {
-		String filePath = "src/main/resources/data/customer_final.csv";
-		dataLoaderService.loadAndTransform(filePath);
-	}
-
 }
+
+
+//public class FreshFarmApplication implements CommandLineRunner {
+//	private final DataLoaderService dataLoaderService;
+//
+//	@Autowired
+//	public FreshFarmApplication(DataLoaderService dataLoaderService) {
+//		this.dataLoaderService = dataLoaderService;
+//	}
+//	public static void main(String[] args) {
+//		SpringApplication.run(FreshFarmApplication.class, args);
+//	}
+//
+//	@Override
+//	public void run(String... args) throws Exception {
+//		String filePath = "src/main/resources/data/customer_final.csv";
+//		dataLoaderService.loadAndTransform(filePath);
+//	}
+//
+//}
+
+
