@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head lang="en">
+  <meta charset="UTF-8"/>
+  <title>My Details</title>
+  <link rel="stylesheet" href="/main.css" />
+</head>
+<body>
+
+<h1 th:text="${customer.forename}"></h1>
+
+<div th:text="${customer.address_line1}"></div>
+<div th:text="${customer.postcode}"></div>
+
+<!--<form action="#" th:action="@{/profile}" th:object="${customer}" method="post">
+  <p>Update Address: <input type="text" name="address_line1" /></p>
+  <p>Update Post Code: <input type="text" name="postcode" /></p>
+  <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+</form>
+-->
+</body>
+</html>
