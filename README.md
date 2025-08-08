@@ -7,3 +7,8 @@
 ```bash
 mvn spring-boot:run
 ```
+4. Run this command to seed customers and products:
+```bash
+mvn spring-boot:run -Dspring-boot.run.profiles=seed
+
+```
