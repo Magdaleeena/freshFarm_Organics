@@ -148,7 +148,8 @@ footer a {
     color: #ffffff;
     text-decoration: underline;
 }
-.product-grid {
+
+    .product-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr); /* exactly 4 columns */
       gap: 1rem;  /* space between grid items */
@@ -180,3 +181,4 @@ footer a {
     .page-section-title {
         color: #2E4D3D;
     }
+
