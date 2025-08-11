@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Fruits | FreshFarm</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+</head>
+
+<body>
+<header>
+    <h1 class="main-title">Welcome to Fresh Farm Organics</h1>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="/home" class="nav-link">Our Story</a></li>
+            <li><a href="/fruits" class="nav-link">Fruits & Vegetables</a></li>
+            <li><a href="/dairy" class="nav-link">Dairy</a></li>
+            <li><a href="/boxes" class="nav-link">Pre-set Boxes</a></li>
+            <li><a href="/contact" class="nav-link">Contact Us</a></li>
+            <li class="icons">👤</li>
+            <li class="icons">🛒</li>
+        </ul>
+    </nav>
+</header>
+<h2 class="page-section-title">Fruits</h2>
+<div class="product-grid">
+    <div th:each="fruit : ${fruits}" class="product-card">
+        <img th:src="${fruit.imageUrl}" alt="Fruit image">
+        <h3 th:text="${fruit.productName}"></h3>
+        <p th:text="${fruit.description}"></p>
+        <p>Price: £<span th:text="${fruit.unitPrice}"></span></p>
+        <p>Quantity: <span th:text="${fruit.unitValue}"></span> <span th:text="${fruit.unitType}"></span></p>
+        <button class="add-to-basket">+ Add to Basket</button>
+    </div>
+</div>
+
+<footer>
+    <p>© 2025 Fresh Farm Organics. All rights reserved.</p>
+    <p>Powered by Stripe</p>
+</footer>
+</body>
+</html>
