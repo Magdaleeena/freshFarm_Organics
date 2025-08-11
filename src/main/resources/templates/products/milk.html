@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head lang="en">
+  <meta charset="UTF-8"/>
+  <title>freshFarmOrganics</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+</head>
+<body>
+<header>
+  <h1 class="main-title">Welcome to Fresh Farm Organics</h1>
+  <div class="user-actions">
+    <div sec:authorize="isAuthenticated()">
+      Hello, you are logged in as
+      <span class="user-email" sec:authentication="principal.attributes['email']"></span>
+      <a href="/logout" class="button-logout">
+        <i class="fa-solid fa-right-from-bracket"></i> Logout
+      </a>
+    </div>
+    <div sec:authorize="isAnonymous()">
+      <a href="/oauth2/authorization/okta" class="button-login">
+        <i class="fa-solid fa-right-to-bracket"></i> Log in
+      </a>
+    </div>
+  </div>
+  <nav class="main-nav">
+    <ul>
+      <li><a href="/" class="nav-link">Our Story</a></li>
+      <li><a href="/fruits" class="nav-link">Fruits & Vegetables</a></li>
+      <li><a href="/dairy" class="nav-link">Dairy</a></li>
+      <li><a href="/boxes" class="nav-link">Pre-set Boxes</a></li>
+      <li><a href="/contact" class="nav-link">Contact Us</a></li>
+    </ul>
+  </nav>
+</header>
+<h2 class="page-section-title">Milk</h2>
+
+<div class="product-grid">
+  <div th:each="m : ${milk}" class="product-card">
+    <img th:src="${m.imageUrl}" alt="Milk image">
+    <h3 th:text="${m.productName}"></h3>
+    <p th:text="${m.description}"></p>
+    <p>Price: £<span th:text="${m.unitPrice}"></span></p>
+    <p>Quantity: <span th:text="${m.unitValue}"></span> <span th:text="${m.unitType}"></span></p>
+    <button class="add-to-basket">+ Add to Basket</button>
+  </div>
+</div>
+
+</body>
+</html>
