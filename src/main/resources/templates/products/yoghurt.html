@@ -34,14 +34,15 @@
     </ul>
   </nav>
 </header>
-<h2 class="page-section-title">Milk</h2>
+<h2 class="page-section-title">Yoghurts</h2>
 
 <div class="product-grid">
-  <div th:each="m : ${milk}" class="product-card">
-    <img th:src="${m.imageUrl}" alt="Milk image">
-    <h3 th:text="${m.productName}"></h3>
-    <p th:text="${m.description}"></p>
-    <p>Price: £<span th:text="${m.unitPrice}"></span></p>
+  <div th:each="y : ${yoghurt}" class="product-card">
+    <img th:src="${y.imageUrl}" alt="Yogurt image">
+    <h3 th:text="${y.productName}"></h3>
+    <p th:text="${y.description}"></p>
+    <p>Price: £<span th:text="${y.unitPrice}"></span></p>
+    <p>Quantity: <span th:text="${y.unitValue}"></span> <span th:text="${y.unitType}"></span></p>
     <button class="add-to-basket">+ Add to Basket</button>
   </div>
 </div>
