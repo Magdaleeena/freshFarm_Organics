@@ -12,3 +12,7 @@ mvn spring-boot:run
 mvn spring-boot:run -Dspring-boot.run.profiles=seed
 
 ```
+
+### Login details:
+Email address: test@admin.co.uk
+Password: Test2025*

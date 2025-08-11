@@ -9,7 +9,7 @@ import java.util.Optional;
 @Controller
 public class HomeController {
 
-    @GetMapping("/home")
+    @GetMapping("/")
     public String home(){
         return "index";
     }
