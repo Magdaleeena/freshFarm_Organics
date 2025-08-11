@@ -87,6 +87,52 @@ about p {
   font-size: 1.05rem;
 }
 
+.user-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.button-login,
+.button-logout {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  border: 1px solid transparent;
+  transition: background 0.2s ease;
+}
+
+.button-login {
+  background-color: #16a34a;
+  color: white;
+}
+
+.button-login:hover {
+  background-color: #15803d;
+}
+
+.button-logout {
+  background-color: white;
+  border: 1px solid #d1d5db;
+  color: #374151;
+}
+
+.button-logout:hover {
+  border-color: #374151;
+  color: #111827;
+}
+
+.button-login i,
+.button-logout i {
+  font-size: 1rem;
+}
+
 footer {
     margin-top: 2rem;
     font-size: 0.8rem;
