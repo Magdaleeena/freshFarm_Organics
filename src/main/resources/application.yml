@@ -1,0 +1,5 @@
+okta:
+  oauth2:
+    issuer: https://dev-3apganf0p1llwzee.uk.auth0.com/
+    client-id: WbRh2bNWTOL7HHmTGoo0yd1iqMFEvZcQ
+    client-secret: vCw7Hu28mrMr3XzhotVBN3WpDDVOl9tlua8aQXj-eKBlLlZQml2E_MkguOZNzbUO
