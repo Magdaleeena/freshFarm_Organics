@@ -34,20 +34,21 @@
     </ul>
   </nav>
 </header>
-<h2 class="page-section-title">Milk</h2>
+<h2 class="page-section-title">Cheese</h2>
 
 <div class="product-grid">
-  <div th:each="m : ${milk}" class="product-card">
-    <img th:src="${m.imageUrl}" alt="Milk image">
-    <h3 th:text="${m.productName}"></h3>
-    <p th:text="${m.description}"></p>
-    <p>Price: £<span th:text="${m.unitPrice}"></span></p>
+  <div th:each="c : ${cheese}" class="product-card">
+    <img th:src="${c.imageUrl}" alt="Cheese image">
+    <h3 th:text="${c.productName}"></h3>
+    <p th:text="${c.description}"></p>
+    <p>Price: £<span th:text="${c.unitPrice}"></span></p>
+    <p>Quantity: <span th:text="${c.unitValue}"></span> <span th:text="${c.unitType}"></span></p>
     <button class="add-to-basket">+ Add to Basket</button>
   </div>
 </div>
 <footer>
-  <p>© 2025 Fresh Farm Organics. All rights reserved.</p>
-  <p>Powered by Stripe</p>
+<p>© 2025 Fresh Farm Organics. All rights reserved.</p>
+<p>Powered by Stripe</p>
 </footer>
 </body>
 </html>
