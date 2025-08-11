@@ -8,32 +8,7 @@
     <link rel="stylesheet" type="text/css" href="/css/styles.css" />
 </head>
 <body>
-<header>
-    <h1 class="main-title">Welcome to Fresh Farm Organics</h1>
-    <div class="user-actions">
-        <div sec:authorize="isAuthenticated()">
-            Hello, you are logged in as
-            <span class="user-email" sec:authentication="principal.attributes['email']"></span>
-            <a href="/logout" class="button-logout">
-                <i class="fa-solid fa-right-from-bracket"></i> Logout
-            </a>
-        </div>
-        <div sec:authorize="isAnonymous()">
-            <a href="/oauth2/authorization/okta" class="button-login">
-                <i class="fa-solid fa-right-to-bracket"></i> Log in
-            </a>
-        </div>
-    </div>
-    <nav class="main-nav">
-        <ul>
-            <li><a href="/" class="nav-link">Our Story</a></li>
-            <li><a href="/fruits" class="nav-link">Fruits & Vegetables</a></li>
-            <li><a href="/dairy" class="nav-link">Dairy</a></li>
-            <li><a href="/boxes" class="nav-link">Pre-set Boxes</a></li>
-            <li><a href="/contact" class="nav-link">Contact Us</a></li>
-        </ul>
-    </nav>
-</header>
+<div th:replace="fragments :: navbar"></div>
 <h2 class="page-section-title">Fruits</h2>
 <div class="product-grid">
     <div th:each="fruit : ${fruits}" class="product-card">
