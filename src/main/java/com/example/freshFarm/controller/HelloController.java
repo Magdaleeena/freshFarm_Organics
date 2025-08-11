@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HelloController {
-    @GetMapping("/")
+    @GetMapping("/hello")
     public String home(){
         return "FreshFarm Organics App is running fine!";
     }
