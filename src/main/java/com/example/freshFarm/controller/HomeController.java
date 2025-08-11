@@ -16,8 +16,7 @@ public class HomeController {
     @Autowired
     private ProductRepository productRepository;
 
-
-    @GetMapping("/home")
+    @GetMapping("/")
     public String home(){
         return "index";
     }
