@@ -259,4 +259,58 @@ footer a {
     .page-section-title {
         color: #2E4D3D;
     }
+/* FAQ container */
+.faq {
+  max-width: 800px;     /* keep FAQ narrow */
+  margin: 2rem auto;    /* center and add space from top/bottom */
+  padding: 0 1rem;      /* side padding */
+}
 
+/* FAQ section title */
+.faq h1 {
+  color: #2E4D3D;       /* your green */
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Each question box */
+.faq details {
+  background: #f9f9f9;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Question text */
+.faq summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: #2E4D3D;
+  font-size: 1.05rem;
+  list-style: none;  /* removes default triangle */
+}
+
+/* Add custom arrow icon */
+.faq summary::marker {
+  content: '';
+}
+.faq summary::before {
+  content: '▸';
+  color: #2E4D3D;
+  margin-right: 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+/* Rotate arrow when open */
+.faq details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+/* Answer text */
+.faq p {
+  margin-top: 0.5rem;
+  line-height: 1.6;
+  color: #333;
+}

@@ -11,4 +11,8 @@ public class HomeController {
         return "index";
     }
 
+    @GetMapping("/faq")
+        public String support_faq(){
+        return "faq";
+    }
 }
