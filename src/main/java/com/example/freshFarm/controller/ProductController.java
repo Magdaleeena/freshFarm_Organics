@@ -48,4 +48,11 @@ public class ProductController {
         model.addAttribute("yoghurt", yoghurt);
         return "products/yoghurt";
     }
+
+    @GetMapping("/boxes")
+    public String boxes (Model model){
+        List<Product> boxes = productRepository.findByCategoryIgnoreCase("packagebox");
+        model.addAttribute("boxes", boxes);
+        return "products/boxes";
+    }
 }
