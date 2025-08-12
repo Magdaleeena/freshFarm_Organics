@@ -16,7 +16,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 public class Customer {
-
     @Id
     @Column(name = "customer_id", nullable = false, unique = true)
     private String customerId;
@@ -44,6 +43,5 @@ public class Customer {
 
     @Column(name = "phone_number", nullable = false)
     private String phoneNumber;
-
 }
 

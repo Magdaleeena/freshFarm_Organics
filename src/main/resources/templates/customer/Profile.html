@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5" lang="en">
+<head lang="en">
+  <meta charset="UTF-8"/>
+  <title>My Details</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+</head>
+<body>
+<div th:replace="fragments/header :: header"></div>
+
+<p>Hi <span th:text="${profile_name}"></span>! Here's the address we have for you:</p>
+<br>
+<p><span th:text="${profile_name}"></span> <span th:text="${profile_surname}"></span><br>
+<span th:text="${addressLine1}"></span><br>
+<span th:text="${addressTown}"></span><br>
+<span th:text="${addressPostcode}"></span></p>
+<br>
+<hr>
+<p>Need to change your address?</p>
+<form action="#" th:action="@{/profile}" th:object="${user}" method="post">
+  <div><center>
+    <table>
+      <tr>
+        <td style="text-align: right">Street name and number:</td>
+        <td><input type="text" name="addressLine1" /></td>
+      </tr>
+      <tr>
+        <td style="text-align: right">Town:</td>
+        <td><input type="text" name="TownCity" /></td>
+      </tr>
+      <tr>
+        <td style="text-align: right">Postcode:</td>
+        <td><input type="text" name="Postcode"></td>
+      </tr>
+      <tr>
+        <td colspan="2"></td>
+      </tr>
+      <tr>
+        <td colspan="2" style="text-align: center"><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></td>
+      </tr>
+    </table>
+    </center></div>
+</form>
+
+<footer>
+  <p>© 2025 Fresh Farm Organics. All rights reserved.</p>
+  <p>Powered by Stripe</p>
+</footer>
+</body>
+</html>
