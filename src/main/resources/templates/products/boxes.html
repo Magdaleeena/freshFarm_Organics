@@ -9,7 +9,7 @@
 </head>
 <body>
 <div th:replace="fragments/header :: header"></div>
-<h2 class="page-section-title">Milk</h2>
+<h2 class="page-section-title">Mixed Boxes</h2>
 
 <div class="product-grid">
     <div th:each="p : ${boxes}" class="product-card">
@@ -21,9 +21,6 @@
         <button class="add-to-basket">+ Add to Basket</button>
     </div>
 </div>
-<footer>
-    <p>© 2025 Fresh Farm Organics. All rights reserved.</p>
-    <p>Powered by Stripe</p>
-</footer>
+<div th:replace="fragments/footer :: footer"></div>
 </body>
 </html>

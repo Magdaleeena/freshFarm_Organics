@@ -81,7 +81,7 @@ public class ProductScraper {
         try {
             ObjectMapper mapper = new ObjectMapper();
             mapper.enable(SerializationFeature.INDENT_OUTPUT); // pretty print
-            mapper.writeValue(new File("freshFarm_products.json"), allProducts);
+            mapper.writeValue(new File("src/main/resources/data/freshFarm_products.json"), allProducts);
             System.out.println("Saved " + allProducts.size() + " products to freshFarm_products.json");
         } catch (Exception e) {
             System.out.println("Failed to write JSON file: " + e.getMessage());
