@@ -8,56 +8,7 @@
   <link rel="stylesheet" type="text/css" href="/css/styles.css" />
 </head>
 <body>
-<header>
-  <h1 class="main-title">Welcome to Fresh Farm Organics</h1>
-  <div class="user-actions">
-    <div sec:authorize="isAuthenticated()">
-      Hello, you are logged in as
-      <span class="user-email" sec:authentication="principal.attributes['email']"></span>
-      <a href="/logout" class="button-logout">
-        <i class="fa-solid fa-right-from-bracket"></i> Logout
-      </a>
-    </div>
-    <div sec:authorize="isAnonymous()">
-      <a href="/oauth2/authorization/okta" class="button-login">
-        <i class="fa-solid fa-right-to-bracket"></i> Log in
-      </a>
-    </div>
-  </div>
-  <nav class="main-nav">
-    <ul>
-      <li>
-        <a href="/" class="nav-link">Our Story</a>
-      </li>
-      <li>
-        <a href="/fruits" class="nav-link">Fruits & Vegetables v</a>
-        <ul class="dropdown">
-          <li><a href="/fruits">Fruits</a></li>
-          <li><a href="/vegetables">Vegetables</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="/dairy" class="nav-link">Dairy v</a>
-        <ul class="dropdown">
-          <li><a href="/milk">Milk</a></li>
-          <li><a href="/cheese">Cheese</a></li>
-          <li><a href="/yoghurt">Yoghurt</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="/boxes" class="nav-link">Pre-set Boxes</a>
-      </li>
-      <li>
-        <a href="/contact" class="nav-link">Contact Us v</a>
-        <ul class="dropdown">
-          <li><a href="/support">Support</a></li>
-          <li><a href="/faq">FAQ</a></li>
-        </ul>
-      </li>
-    </ul>
-  </nav>
-
-</header>
+<div th:replace="fragments/header :: header"></div>
 <main>
   <section class="home-image">
     <img src="https://assets.savills.com/properties/GBYORUYOR250067/YOR250067_18_l_lis.jpg" alt="Farm and fields">
