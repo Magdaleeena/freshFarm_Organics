@@ -12,6 +12,7 @@ public interface CustomerRepository extends JpaRepository<Customer, String> {
     @Override
     Optional<Customer> findById(String customer_id);
     Optional<Customer> findByAddressLine1AndPostcode(String address_line1, String postcode);
+    Optional<Customer> findUserByEmail(String email);
 
     // We can define custom queries here if needed in the future
 }
