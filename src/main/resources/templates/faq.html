@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head lang="en">
+  <meta charset="UTF-8"/>
+  <title>freshFarmOrganics</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+</head>
+  <body>
+<div th:replace="fragments/header :: header"></div>
+  <section class="faq">
+    <h1>Frequently Asked Questions</h1>
+  <details>
+    <summary>When will I receive my order?</summary>
+    <p>Local Orders <br>Order before 2pm Monday to Friday for same-day delivery <br>Order before 12pm Saturday and Sunday for same-day delivery <br><br>National <br>Order before 2pm Monday to Friday for next-day delivery <br>Order before 12pm Saturday and Sunday for next-day delivery</p>
+  </details>
+
+  <details>
+    <summary>What payment methods can I use?</summary>
+    <p>We accept all major debit and credit cards, PayPal and bank transfers.</p>
+  </details>
+
+  <details>
+    <summary>What if there is a problem?</summary>
+    <p>We want you to be 100% satisfied with your delivery. We make lots of deliveries every week and have lots of happy customers.<br> If for any reason you are not, please let us know and we will do everything we can to resolve the matter for you. <br>To help us investigate, please take a picture of your delivery and send it to hello@farmfreshorganics.co.uk.</p>
+  </details>
+  </section>
+
+<footer>
+  <p>© 2025 Fresh Farm Organics. All rights reserved.</p>
+  <p>Powered by Stripe</p>
+</footer>
+  </body>
+</html>
