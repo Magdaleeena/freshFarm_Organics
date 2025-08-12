@@ -25,7 +25,7 @@ public class ProductLoader implements CommandLineRunner {
     @Override
     public void run(String... args) {
         try {
-            File jsonFile = new File("freshFarm_products_db.json");
+            File jsonFile = new File("src/main/resources/data/freshFarm_products_db.json");
             if (!jsonFile.exists()) {
                 System.out.println("JSON file not found: " + jsonFile.getAbsolutePath());
                 return;
