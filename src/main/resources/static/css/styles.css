@@ -314,3 +314,109 @@ footer a {
   line-height: 1.6;
   color: #333;
 }
+
+/* ---------- CONTACT PAGE ---------- */
+.contact-wrap {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    text-align: left; /* forms read better left-aligned */
+}
+
+.contact-subtitle {
+    color: #6F7E61;
+    margin-top: .25rem;
+    text-align: center;
+}
+
+.contact-card {
+    background: #f7f9f5;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,50,0,0.05);
+    padding: 1.25rem;
+    margin-top: 1rem;
+}
+
+.contact-form .hint { font-size: .85rem; color: #6F7E61; }
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+@media (min-width: 760px) {
+    .form-grid { grid-template-columns: 1fr 1fr; }
+    .form-field--full { grid-column: 1 / -1; }
+}
+
+.form-field label {
+    display: block;
+    font-weight: 700;
+    color: #4F5A43;
+    margin-bottom: .35rem;
+}
+
+.form-field input,
+.form-field textarea {
+    width: 100%;
+    padding: .7rem .8rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font: inherit;
+    background: #fff;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+    outline: 2px solid #86efac;
+    border-color: #637154;
+}
+
+.form-error {
+    color: #b00020;
+    font-size: .9rem;
+    margin-top: .35rem;
+}
+
+.form-row.between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: .35rem;
+}
+
+.contact-actions {
+    margin-top: .75rem;
+    display: flex;
+    gap: .75rem;
+}
+
+/* reuse your green button look; add outline variant */
+.btn-outline {
+    background: transparent;
+    color: #7e8f6e;
+    border: 1px solid #7e8f6e;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn-outline:hover { background: #eef2ec; }
+
+.contact-alert {
+    margin: 1rem 0;
+    padding: .85rem 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+.contact-alert-success {
+    background: #e9f7ef;
+    color: #1b5e20;
+    border: 1px solid #b7e2c7;
+}
+
+.contact-meta {
+    margin: 1rem 0;
+    text-align: center;
+    color: #6F7E61;
+}
