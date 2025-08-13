@@ -25,7 +25,7 @@ header {
 }
 
 .main-title{
-    color: 	#4F5A43;
+    color:  #4F5A43;
     font-weight: 800;
     line-height: .95;
     letter-spacing: .4px;
@@ -34,7 +34,7 @@ header {
 }
 
 .main-sub-title{
-    color: 	#637154;
+    color:  #637154;
     margin: 0;
     font-weight: 700;
     text-transform: uppercase;
@@ -545,4 +545,3 @@ footer a {
   line-height: 1.7;
   font-size: 1rem;
 }
-
