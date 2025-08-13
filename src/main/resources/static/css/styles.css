@@ -57,6 +57,7 @@ header {
   background-color: #7e8f6e;
   width: 100%;
   box-sizing: border-box;
+  position: relative;
 }
 
 /* top-level list layout */
@@ -314,3 +315,111 @@ footer a {
   line-height: 1.6;
   color: #333;
 }
+
+/* ===== CART PAGE ===== */
+
+/* Section title */
+.page-section-title {
+  color: #4F5A43;
+  font-weight: 800;
+  letter-spacing: .02em;
+  margin: 1.25rem auto .75rem;
+}
+
+/* Table */
+.cart-table {
+  width: 90%;
+  max-width: 960px;
+  margin: 1rem auto 1.25rem;
+  border-collapse: collapse;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.cart-table thead th {
+  background: #4F5A43;
+  color: #fff;
+  font-weight: 700;
+  text-align: left;
+  padding: .9rem 1rem;
+}
+
+.cart-table tbody td {
+  padding: .85rem 1rem;
+  border-top: 1px solid #eef2f7;
+  vertical-align: middle;
+  color: #1f2937;
+}
+
+.cart-table tbody tr:hover td {
+  background: #f8faf8;
+}
+
+/* Qty form inline */
+.inline { display: inline-flex; align-items: center; gap: .5rem; }
+
+.qty-input {
+  width: 64px;
+  padding: .4rem .5rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  text-align: center;
+  font-size: .95rem;
+}
+.qty-input:focus {
+  outline: none;
+  border-color: #4F5A43;
+  box-shadow: 0 0 0 3px rgba(79,90,67,.15);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center;
+  gap: .35rem; padding: .55rem .9rem;
+  border-radius: 8px; font-weight: 600;
+  font-size: .95rem; text-decoration: none;
+  border: 1px solid transparent; cursor: pointer;
+  background: #637154; color: #fff;
+  transition: background .15s ease, border-color .15s ease, color .15s ease;
+}
+.btn:hover { background: #4F5A43; }
+
+.btn-outline {
+  background: #fff; color: #374151; border-color: #d1d5db;
+}
+.btn-outline:hover { color: #111827; border-color: #374151; }
+
+/* Summary row */
+.cart-summary {
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto 2rem;
+  display: flex; justify-content: flex-end; align-items: center; gap: 1rem;
+  font-size: 1.05rem;
+}
+.cart-summary strong { color: #4F5A43; }
+
+.button-login { display: inline-flex; align-items: center; gap: .35rem; }
+
+.nav-cart-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: #fff;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-cart-link:hover {
+    background-color: #637154;
+    border-radius: 8px;
+    color: #ffffff;
+}
+
+.nav-cart-link i {
+    pointer-events: none;
+}
+

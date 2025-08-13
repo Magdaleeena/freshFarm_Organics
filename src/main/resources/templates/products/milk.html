@@ -17,7 +17,11 @@
     <h3 th:text="${m.productName}"></h3>
     <p th:text="${m.description}"></p>
     <p>Price: £<span th:text="${m.unitPrice}"></span></p>
-    <button class="add-to-basket">+ Add to Basket</button>
+    <form th:action="@{/cart/add}" method="post" class="add-form">
+      <input type="hidden" name="productId" th:value="${m.productId}">
+      <input type="number" name="qty" min="1" value="1" class="qty-input">
+      <button type="submit" class="add-to-basket">Add to Basket</button>
+    </form>
   </div>
 </div>
 <div th:replace="fragments/footer :: footer"></div>

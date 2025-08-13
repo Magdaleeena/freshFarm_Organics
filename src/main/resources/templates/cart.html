@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head lang="en">
+  <meta charset="UTF-8"/>
+  <title>freshFarmOrganics</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+</head>
+<body>
+  <div th:replace="~{fragments/header :: header}"></div>
+    <h2 class="page-section-title">Your Basket</h2>
+  <div th:if="${#maps.isEmpty(cart.items)}">
+    <p>Your basket is empty.</p>
+    <p><a href="/boxes" class="button-login">Continue shopping</a></p>
+  </div>
+  <table th:if="${!#maps.isEmpty(cart.items)}" class="cart-table">
+    <thead>
+      <tr><th>Item</th><th>Price</th><th>Qty</th><th>Total</th><th></th></tr>
+  </thead>
+  <tbody>
+      <tr th:each="it : ${cart.items.values()}">
+        <td th:text="${it.name}">Item</td>
+        <td>£<span th:text="${it.unitPrice}">0.00</span></td>
+        <td>
+      <form th:action="@{/cart/update}" method="post" class="inline">
+        <input type="hidden" name="productId" th:value="${it.productId}">
+        <input type="number" name="qty" min="0" th:value="${it.qty}" class="qty-input">
+        <button class="btn btn-outline" type="submit">Update</button>
+      </form>
+    </td>
+    <td>£<span th:text="${it.lineTotal}">0.00</span></td>
+    <td>
+      <form th:action="@{/cart/remove}" method="post" class="inline">
+        <input type="hidden" name="productId" th:value="${it.productId}">
+        <button class="btn btn-outline" type="submit">Remove</button>
+      </form>
+    </td>
+  </tr>
+  </tbody>
+  </table>
+  <div th:if="${!#maps.isEmpty(cart.items)}" class="cart-summary">
+  <p><strong>Subtotal:</strong> £<span th:text="${cart.subtotal}">0.00</span></p>
+  <form th:action="@{/cart/clear}" method="post" class="inline"
+        onsubmit="return confirm('Empty your basket?');">
+    <button class="btn btn-outline" type="submit">Empty basket</button>
+  </form>
+  <!-- Checkout / Stripe. Link it somewhere down here -->
+  </div>
+  <div th:replace="fragments/footer :: footer"></div>
+</body>
+</html>
