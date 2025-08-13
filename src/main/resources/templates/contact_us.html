@@ -4,12 +4,11 @@
     <meta charset="UTF-8"/>
     <title>freshFarmOrganics • Contact</title>
     <link rel="stylesheet" href="/css/styles.css"/>
-    <link rel="stylesheet" href="/css/contact.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 </head>
 <body>
-<div th:replace="fragments/header :: header"></div>
-
+<div th:replace="~{fragments/header :: header}"></div>
 <section class="contact-wrap">
     <h1 class="page-section-title">Contact Us</h1>
     <p class="contact-subtitle">We’d love to hear from you. Visit, call, or send us a message.</p>
@@ -17,7 +16,7 @@
     <div class="contact-card">
         <div class="contact-grid">
             <!-- LEFT: Contact form -->
-            <form class="contact-col" th:action="@{/support}" th:object="${contactForm}" method="post" novalidate>
+            <form class="contact-col" th:action="@{/contact_us}" th:object="${contactForm}" method="post" novalidate>
 <!--                <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>-->
                 <input type="hidden" sec:csrfInput=""/>
 
@@ -96,9 +95,7 @@
         </div>
     </div>
 </section>
-
-<div th:replace="fragments/footer :: footer"></div>
-
+<div th:replace="~{fragments/footer :: footer}"></div>
 <script>
     (function () {
         var ta = document.getElementById('message');

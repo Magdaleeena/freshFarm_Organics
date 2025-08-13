@@ -545,3 +545,161 @@ footer a {
   line-height: 1.7;
   font-size: 1rem;
 }
+
+/* CONTACT PAGE STYLES */
+
+/* Wrapper & Headings */
+.contact-wrap {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    text-align: left;
+    font-family: 'Inter', 'Helvetica Neue', 'Segoe UI', sans-serif;
+}
+
+.page-section-title {
+    color: #4F5A43;
+    font-weight: 800;
+    text-align: center;
+}
+
+.contact-subtitle {
+    color: #6F7E61;
+    text-align: center;
+    margin: .25rem 0 1.5rem;
+    font-weight: 500;
+}
+
+/* Card container */
+.contact-card {
+    background: #f7f9f5;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,50,0,.05);
+    padding: 1.25rem;
+    overflow: hidden;
+}
+
+/* Two-column responsive grid */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+@media (min-width: 960px) {
+    .contact-grid {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    }
+}
+
+.contact-col {
+    min-width: 0;
+    color: #4F5A43;
+}
+
+/* Form styles */
+.form-field {
+    margin-bottom: .9rem;
+}
+
+.form-field label {
+    display: block;
+    font-weight: 700;
+    color: #4F5A43;
+    margin-bottom: .35rem;
+}
+
+.form-field input,
+.form-field textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: .7rem .8rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font: inherit;
+    background: #fff;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+    outline: 2px solid #86efac;
+    border-color: #637154;
+}
+
+.form-row {
+    display: flex;
+    gap: .75rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.form-row.space-between {
+    justify-content: space-between;
+}
+
+.form-error {
+    color: #b00020;
+    font-size: .9rem;
+    margin-top: .35rem;
+}
+
+/* Buttons */
+.add-to-basket {
+    background-color: #7e8f6e;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-basket:hover {
+    background-color: #637154;
+}
+
+.btn-outline {
+    background: transparent;
+    color: #7e8f6e;
+    border: 1px solid #7e8f6e;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-outline:hover {
+    background: #eef2ec;
+}
+
+/* Map embed */
+.map-embed {
+    width: 100%;
+    aspect-ratio: 16 / 12.5;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #eaeaea;
+}
+
+.map-embed iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Flash messages */
+.contact-alert {
+    margin: 1rem 0;
+    padding: .85rem 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.contact-alert-success {
+    background: #EEF5F1;
+    color: #1b5e20;
+    border: 1px solid #b7e2c7;
+}
