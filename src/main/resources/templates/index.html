@@ -10,9 +10,41 @@
 <body>
 <div th:replace="fragments/header :: header"></div>
 <main>
-  <section class="home-image">
-    <img src="https://assets.savills.com/properties/GBYORUYOR250067/YOR250067_18_l_lis.jpg" alt="Farm and fields">
+  <div class="home-images">
+    <div class="home-image">
+      <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?q=80&w=1774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Cows and calf on the field during golden hour">
+    </div>
+    <div class="home-image">
+      <img src="https://images.unsplash.com/photo-1471193945509-9ad0617afabf?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Fresh carrot and leak">
+    </div>
+  </div>
+  <section class="usp">
+    <div class="usp-item">
+      <img class="usp-icon" src="https://plus.unsplash.com/premium_photo-1661963367713-b85abde75a23?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Nature & sustainability">
+      <h3 class="usp-title">Nature & Sustainability</h3>
+      <p class="usp-text">
+        We farm with biodiversity in mind—wildflower meadows, low-intensity methods, and soil-first practices.
+        Our goal is to protect and restore the land so it can thrive for generations to come.
+      </p>
+    </div>
+    <div class="usp-item">
+      <img class="usp-icon" src="https://media.istockphoto.com/id/1241482623/photo/assorted-of-dairy-product-with-milk-butter-cheese.jpg?s=1024x1024&w=is&k=20&c=KpXSjrHeiRhL5JN41BVfbHOaz8hsYU3a7ToFdvWtntI=" alt="Organic dairy">
+      <h3 class="usp-title">Organic Dairy</h3>
+      <p class="usp-text">
+        Certified organic milk, yoghurt and cheese—pure, simple, and produced with animal welfare at heart.
+        Every product is made with care, from grass-fed cows to your kitchen table.
+      </p>
+    </div>
+    <div class="usp-item">
+      <img class="usp-icon" src="https://images.unsplash.com/photo-1695654392283-4ea0fa0b4bb6?q=80&w=1769&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Fresh delivery">
+      <h3 class="usp-title">Delivered Fresh To Your Door</h3>
+      <p class="usp-text">
+        Carefully packed, chilled when needed, and delivered nationwide in recyclable packaging.
+        We make sure your order arrives as fresh as the moment it left the farm.
+      </p>
+    </div>
   </section>
+
   <section class="about">
     <h2>About Us</h2>
     <p>
@@ -28,6 +60,17 @@
       Whether you're picking up a veg box, enjoying a block of our creamy goat cheese, or visiting us for the first time — welcome to the farm. We're so glad you're here.
     </p>
   </section>
+  <div class="home-images">
+    <div class="home-image">
+      <img src="https://kentdowns.org.uk/wp-content/uploads/2025/02/Untitled-design-96-1024x620-1-aspect-ratio-760-400.png" alt="Cows and calf on the field during golden hour">
+    </div>
+    <div class="home-image">
+      <img src="https://assets.farmsanctuary.org/content/uploads/2025/08/03093305/b82704a9-c906-4430-be2b-52c7d298d223.jpg" alt="Fresh carrot and leak">
+    </div>
+  </div>
+<!--  <section class="home-image">-->
+<!--    <img src="https://assets.farmsanctuary.org/content/uploads/2025/08/03093305/b82704a9-c906-4430-be2b-52c7d298d223.jpg" alt="Farm and fields">-->
+<!--  </section>-->
 </main>
 <div th:replace="fragments/footer :: footer"></div>
 </body>
