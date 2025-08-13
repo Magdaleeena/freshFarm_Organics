@@ -34,7 +34,7 @@ public class SecurityConfiguration {
         http
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/", "/hello", "/css/**", "/oauth2/**", "/login", "/milk", "/vegetables", "/fruits", "/cheese", "/yoghurt", "/boxes", "/faq", "/support", "/cart/**", "/contact").permitAll()
+                        .requestMatchers("/", "/hello", "/css/**", "/oauth2/**", "/login", "/milk", "/vegetables", "/fruits", "/cheese", "/yoghurt", "/boxes", "/faq", "/support", "/cart/**", "/contact_us").permitAll()
                         .anyRequest().authenticated()
                 )
                 .oauth2Login(o -> o
