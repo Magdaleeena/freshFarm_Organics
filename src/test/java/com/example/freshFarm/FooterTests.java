@@ -32,6 +32,7 @@ class FooterTests {
     void closeContext() {
         context.close();
     }
+
     @Test
     public void footerIsShown() {
         page.navigate("http://localhost:8080");
