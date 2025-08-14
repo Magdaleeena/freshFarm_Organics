@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <meta charset="UTF-8"/>
+    <title>Order Confirmed</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+</head>
+<body>
+<div th:replace="~{fragments/header :: header}"></div>
+
+<main class="success-container">
+    <h1 class="main-title">Order Confirmed!</h1>
+
+    <div class="success-card">
+        <div class="success-header">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Thank you for your order!</h2>
+            <p class="success-subtitle">Your order has been successfully placed and confirmed</p>
+        </div>
+
+        <div class="order-details">
+            <div class="detail-row">
+                <span class="detail-label">
+                    <i class="fas fa-hashtag"></i> Order Number
+                </span>
+                <span class="detail-value" th:text="${order.orderId}">123</span>
+            </div>
+
+            <div class="detail-row">
+                <span class="detail-label">
+                    <i class="fas fa-calendar-alt"></i> Order Date
+                </span>
+                <span class="detail-value" th:text="${order.orderDate}">2025-01-20</span>
+            </div>
+
+            <div class="detail-row total-row">
+                <span class="detail-label">
+                    <i class="fas fa-pound-sign"></i> Total Amount
+                </span>
+                <span class="detail-value total-amount">£<span th:text="${order.totalAmount}">0.00</span></span>
+            </div>
+        </div>
+
+        <div class="confirmation-message">
+            <div class="message-icon">
+                <i class="fas fa-envelope"></i>
+            </div>
+            <p>We'll send you an email confirmation shortly with all the details.</p>
+        </div>
+
+        <div class="success-actions">
+            <a href="/" class="btn btn-primary continue-btn">
+                <i class="fas fa-shopping-bag"></i> Continue Shopping
+            </a>
+            <a href="/profile" class="btn btn-outline profile-btn">
+                <i class="fas fa-user"></i> View Orders
+            </a>
+        </div>
+    </div>
+</main>
+
+<div th:replace="fragments/footer :: footer"></div>
+</body>
+</html>
