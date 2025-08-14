@@ -819,7 +819,6 @@ footer a {
     margin-bottom: 0.25rem;
 }
 
-/* Action Icons Bar - Small section between header and nav */
 .action-icons-bar {
     background: #f8faf8;
     border-top: 1px solid #e5e7eb;
@@ -832,7 +831,7 @@ footer a {
     margin: 0 auto;
     padding: 0 1.25rem;
     display: flex;
-    justify-content: flex-end;  /* Icons positioned to the right */
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -840,8 +839,8 @@ footer a {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 32px;  /* Small icons */
-    height: 32px;  /* Small icons */
+    width: 32px;
+    height: 32px;
     border-radius: 6px;
     background: #ffffff;
     color: #4F5A43;
@@ -849,7 +848,7 @@ footer a {
     border: 1px solid #e5e7eb;
     transition: all 0.2s ease;
     position: relative;
-    margin-left: 0.5rem;  /* Space between icons */
+    margin-left: 0.5rem;
 }
 
 .action-icon-btn:hover {
@@ -861,7 +860,7 @@ footer a {
 }
 
 .action-icon-btn i {
-    font-size: 0.85rem;  /* Small icon size */
+    font-size: 0.85rem;
 }
 
 /* Cart Count Badge */
@@ -882,14 +881,13 @@ footer a {
     border: 1px solid #ffffff;
 }
 
-/* Navigation Bar - Truly centered */
 .main-nav {
     background-color: #7e8f6e;
 }
 
 .nav-menu {
     display: flex;
-    justify-content: center;  /* Truly centered */
+    justify-content: center;
     align-items: center;
     gap: 0;
     list-style: none;
@@ -926,7 +924,7 @@ footer a {
     transform: rotate(180deg);
 }
 
-/* Dropdown styles (keep your existing dropdown CSS) */
+/* Dropdown styles */
 .nav-menu .dropdown {
     display: none;
     position: absolute;
