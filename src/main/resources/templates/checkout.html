@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <meta charset="UTF-8"/>
+    <title>Checkout</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+</head>
+<body>
+<div th:replace="~{fragments/header :: header}"></div>
+
+<main class="checkout-container">
+    <h1 class="main-title">Checkout</h1>
+
+    <div class="checkout-grid">
+        <!-- Order Summary Card -->
+        <div class="checkout-card order-summary-card">
+            <div class="card-header">
+                <h2><i class="fas fa-shopping-bag"></i> Order Summary</h2>
+            </div>
+            <div class="order-items">
+                <div th:each="item : ${cart.items}" class="order-item">
+                    <div class="item-details">
+                        <span class="item-name" th:text="${item.value.name}">Product Name</span>
+                        <span class="item-price">£<span th:text="${item.value.unitPrice}">0.00</span></span>
+                    </div>
+                    <div class="item-quantity">
+                        <span class="qty-badge" th:text="${item.value.qty}">1</span>
+                    </div>
+                </div>
+            </div>
+            <div class="order-total">
+                <div class="total-line">
+                    <span>Subtotal:</span>
+                    <span class="total-amount">£<span th:text="${cart.subtotal}">0.00</span></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Customer Details Card -->
+        <div class="checkout-card customer-details-card">
+            <div class="card-header">
+                <h3><i class="fas fa-user"></i> Delivery Details</h3>
+            </div>
+            <div class="customer-info">
+                <div class="info-row">
+                    <span class="info-label">Name:</span>
+                    <span class="info-value" th:text="${customer.forename + ' ' + customer.surname}">Customer Name</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Address:</span>
+                    <span class="info-value" th:text="${customer.addressLine1}">Address</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Town/City:</span>
+                    <span class="info-value" th:text="${customer.townCity}">Town</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Postcode:</span>
+                    <span class="info-value" th:text="${customer.postcode}">Postcode</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Email:</span>
+                    <span class="info-value" th:text="${customer.email}">Email</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Phone:</span>
+                    <span class="info-value" th:text="${customer.phoneNumber}">Phone</span>
+                </div>
+            </div>
+            <div class="profile-link">
+                <a href="/profile" class="btn btn-outline">
+                    <i class="fas fa-edit"></i> Update Details
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Actions -->
+    <div class="checkout-actions">
+        <form th:action="@{/checkout/create-session}" method="post">
+            <button type="submit" class="btn btn-primary checkout-btn">
+                <i class="fas fa-credit-card"></i> Proceed to Payment
+            </button>
+        </form>
+    </div>
+
+    <!-- Error Message -->
+    <div th:if="${error}" class="error-message" th:text="${error}"></div>
+</main>
+
+<div th:replace="fragments/footer :: footer"></div>
+</body>
+</html>
