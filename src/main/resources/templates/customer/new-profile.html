@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5" lang="en">
+<head lang="en">
+  <meta charset="UTF-8"/>
+  <title>My Details</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+</head>
+<body>
+<div th:replace="fragments/header :: header"></div>
+<section class="contact-wrap">
+  <div class="contact-grid">
+    <div class="contact-col">
+      <h1 class="page-section-title">Set Up Your Profile</h1>
+      <p class="contact-subtitle">Help us finish setting your profile up by completing this form</p>
+    </div>
+    <div class="contact-card">
+        <form class="contact-col" th:action="@{/newprofile}" th:object="${profileForm}" method="post">
+          <input type="hidden" sec:csrfInput=""/>
+          <div class="form-field">
+            <label for="forename">First Name</label>
+            <input id="forename" th:field="*{forename}" type="text" maxlength="120" required autocomplete="forename"/>
+          </div>
+          <div>
+            <label for="email">Email</label><input id="email" th:field="*{email}" type="text" maxlength="200" required autocomplete="email"/>
+          </div>
+
+          <div class="form-field">
+            <label for="surname">Surname</label><input id="surname" th:field="*{surname}" type="text" maxlength="120" required autocomplete="surname"/>
+          </div>
+
+          <div class="form-field">
+            <label for="addressLine1">Street address</label><input id="addressLine1" th:field="*{address_line1}" type="text" maxlength="200" required autocomplete="address"/>
+          </div>
+
+          <div class="form-field">
+            <label for="TownCity">Town or City</label><input id="TownCity" th:field="*{town_city}" type="text"  maxlength="120" required autocomplete="town"/>
+          </div>
+
+          <div class="form-field">
+            <label for="country">Country</label><input id="country" th:field="*{country}" type="text"  maxlength="120" required autocomplete="country"/>
+          </div>
+
+          <div class="form-field">
+            <label for="Postcode">Postcode</label><input id="Postcode" th:field="*{postcode}" type="text" maxlength="10" required autocomplete="Postcode"/>
+          </div>
+
+          <div class="form-field">
+            <label for="phone_number">Phone Number</label><input id="phone_number" th:field="*{phone_number}" type="text" maxlength="20" required autocomplete="phone_number"/>
+          </div>
+
+          <div class="form-row">
+            <button type="submit" class="add-to-basket">Submit</button>
+            <button type="reset" class="btn-outline">Clear</button>
+          </div>
+
+        </form>
+      </div>
+  </div>
+</section>
+<div th:replace="fragments/footer :: footer"></div>
+</body>
+</html>
