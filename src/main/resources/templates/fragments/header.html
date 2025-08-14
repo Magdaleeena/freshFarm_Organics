@@ -22,7 +22,7 @@
                 </div>
 
                 <div class="user-actions">
-                    <a href="/profile" class="top-action-btn profile-btn">
+                    <a href="/profile" class="top-action-btn">
                         <i class="fas fa-user-cog"></i>
                         <span>Profile</span>
                     </a>
@@ -46,13 +46,13 @@
 
         <div class="action-icons-bar">
             <div class="action-icons-content">
-                <a href="/cart" class="action-icon-btn cart-btn" title="View Cart">
+                <a href="/cart" class="action-icon-btn" title="View Cart">
                     <i class="fas fa-basket-shopping"></i>
                     <span class="cart-count" th:if="${cart != null and !#maps.isEmpty(cart.items)}"
                           th:text="${cart.items.size()}">0</span>
                 </a>
 
-                <a href="/oauth2/authorization/okta" class="action-icon-btn profile-btn"
+                <a href="/oauth2/authorization/okta" class="action-icon-btn"
                    sec:authorize="isAnonymous()" title="Log in">
                     <i class="fas fa-user"></i>
                 </a>
