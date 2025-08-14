@@ -885,19 +885,6 @@ footer a {
     background-color: #7e8f6e;
 }
 
-.nav-menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1.25rem;
-}
-
 .nav-menu > li {
     position: relative;
 }
