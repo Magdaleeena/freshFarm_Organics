@@ -9,6 +9,6 @@ dependency-reduced-pom.xml
 .factorypath
 .project
 .settings/
-#application.yml
-#application-*.yml
-#application-*.properties
+application.yml
+application-*.yml
+application-*.properties
