@@ -10,6 +10,11 @@
 <body>
   <div th:replace="~{fragments/header :: header}"></div>
     <h2 class="page-section-title">Your Basket</h2>
+  <!-- Error message in case of  checkout fail -->
+  <div th:if="${param.error}" class="error-message">
+    <p th:if="${param.error == 'no-customer'}">No customer found for checkout. Please contact support.</p>
+  </div>
+
   <div th:if="${#maps.isEmpty(cart.items)}">
     <p>Your basket is empty.</p>
     <p><a href="/boxes" class="button-login">Continue shopping</a></p>
@@ -46,6 +51,9 @@
     <button class="btn btn-outline" type="submit">Empty basket</button>
   </form>
   <!-- Checkout / Stripe. Link it somewhere down here -->
+    <form th:action="@{/checkout}" method="get" class="inline">
+      <button class="btn btn-primary" type="submit">Proceed to Checkout</button>
+    </form>
   </div>
   <div th:replace="fragments/footer :: footer"></div>
 </body>

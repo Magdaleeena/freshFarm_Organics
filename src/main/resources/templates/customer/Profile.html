@@ -2,50 +2,65 @@
 <html xmlns:th="http://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5" lang="en">
 <head lang="en">
   <meta charset="UTF-8"/>
-  <title>My Details</title>
+  <title>My FreshFarm Organics</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" type="text/css" href="/css/styles.css" />
 </head>
 <body>
 <div th:replace="fragments/header :: header"></div>
+<h1 class="page-section-title">My Profile</h1>
 
-<p>Hi <span th:text="${profile_name}"></span>! Here's the address we have for you:</p>
-<br>
-<p><span th:text="${profile_name}"></span> <span th:text="${profile_surname}"></span><br>
-<span th:text="${addressLine1}"></span><br>
-<span th:text="${addressTown}"></span><br>
-<span th:text="${addressPostcode}"></span></p>
-<br>
-<hr>
-<p>Need to change your address?</p>
-<form action="#" th:action="@{/profile}" th:object="${user}" method="post">
-  <div><center>
-    <table>
-      <tr>
-        <td style="text-align: right">Street name and number:</td>
-        <td><input type="text" name="addressLine1" /></td>
-      </tr>
-      <tr>
-        <td style="text-align: right">Town:</td>
-        <td><input type="text" name="TownCity" /></td>
-      </tr>
-      <tr>
-        <td style="text-align: right">Postcode:</td>
-        <td><input type="text" name="Postcode"></td>
-      </tr>
-      <tr>
-        <td colspan="2"></td>
-      </tr>
-      <tr>
-        <td colspan="2" style="text-align: center"><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></td>
-      </tr>
-    </table>
-    </center></div>
-</form>
+<section class="contact-wrap">
+    <div class="contact-card">
+        <div class="contact-grid">
+            <div class="contact-col">
+                <p class="contact-subtitle">Here's the address we have for your orders:</p>
+                <p><span th:text="${profile_name}"></span> <span th:text="${profile_surname}"></span><br>
+                    <span th:text="${addressLine1}"></span><br>
+                    <span th:text="${addressTown}"></span><br>
+                    <span th:text="${addressPostcode}"></span></p>
+                <hr>
+                <p class="contact-subtitle">Need to change your address?</p>
+                <form action="#" th:action="@{/profile}" th:object="${user}" method="post">
+                    <div><center>
+                        <table>
+                            <tr>
+                                <td style="text-align: right">Street name and number:</td>
+                                <td><input type="text" name="addressLine1" /></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: right">Town:</td>
+                                <td><input type="text" name="TownCity" /></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: right">Postcode:</td>
+                                <td><input type="text" name="Postcode"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="text-align: center"><input class="add-to-basket" type="submit" value="Submit" /> <input type="reset" value="Reset" class="add-to-basket"/></td>
+                            </tr>
+                        </table>
+                    </center></div>
+                </form>
+            </div>
 
-<footer>
-  <p>© 2025 Fresh Farm Organics. All rights reserved.</p>
-  <p>Powered by Stripe</p>
-</footer>
+            <div class="contacl-col">
+                <div class="contact-subtitle">My Orders</div>
+                <table>
+                    <tr th:each="orders : ${orders}">
+                        <td>Order REF <span  th:text="${orders.orderId}"></span></td>
+                        <td th:text="${orders.orderDate}"></td>
+                        <td><a href="">Click for order details</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div th:replace="fragments/footer :: footer"></div>
 </body>
 </html>

@@ -8,63 +8,43 @@
     <link rel="stylesheet" type="text/css" href="/css/styles.css" />
 </head>
 <body>
-<div th:fragment = "header">
-    <header>
-        <h1 class="main-title">Fresh Farm</h1>
-        <h2 class="main-sub-title">Organics</h2>
-        <h3 class="main-small-title">Your favourite shop</h3>
-        <div class="user-actions">
-            <div sec:authorize="isAuthenticated()">
-                Hello, you are logged in as
-                <span class="user-email" sec:authentication="principal.attributes['email']"></span>
-                <a href="/logout" class="button-logout">
-                    <i class="fa-solid fa-right-from-bracket"></i> Logout
-                </a>
-            </div>
-            <div sec:authorize="isAnonymous()">
-                <a href="/oauth2/authorization/okta" class="button-login">
-                    <i class="fa-solid fa-right-to-bracket"></i> Log in
-                </a>
+<div th:fragment="header">
+    <header class="site-header">
+
+        <div class="top-bar" sec:authorize="isAuthenticated()">
+            <div class="top-bar-content">
+                <div class="user-status">
+                    <div class="authenticated-user">
+                        <i class="fas fa-user-circle"></i>
+                        <span class="welcome-text">Welcome back,</span>
+                        <span class="user-email" sec:authentication="principal.attributes['email']"></span>
+                    </div>
+                </div>
+
+                <div class="user-actions">
+                    <a href="/profile" class="top-action-btn">
+                        <i class="fas fa-user-cog"></i>
+                        <span>Profile</span>
+                    </a>
+                    <a href="/logout" class="top-action-btn logout-btn">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Logout</span>
+                    </a>
+                </div>
             </div>
         </div>
-        <nav class="main-nav">
-            <ul>
-                <li>
-                    <a href="/" class="nav-link">Our Story</a>
-                </li>
-                <li>
-                    <a href="/fruits" class="nav-link" aria-haspopup="true" aria-expanded="false">
-                        Fruits &amp; Vegetables
-                        <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
-                    </a>
-                    <ul class="dropdown" role="menu">
-                        <li><a href="/fruits" role="menuitem">Fruits</a></li>
-                        <li><a href="/vegetables" role="menuitem">Vegetables</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="/dairy" class="nav-link" aria-haspopup="true" aria-expanded="false">Dairy
-                        <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
-                    </a>
-                    <ul class="dropdown">
-                        <li><a href="/milk">Milk</a></li>
-                        <li><a href="/cheese">Cheese</a></li>
-                        <li><a href="/yoghurt">Yoghurt</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="/boxes" class="nav-link">Pre-set Boxes</a>
-                </li>
-                <li>
-                    <a href="/support" class="nav-link" aria-haspopup="true" aria-expanded="false">Support
-                        <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
-                    </a>
-                    <ul class="dropdown">
-                        <li><a href="/contact_us">Contact Us</a></li>
-                        <li><a href="/faq">FAQ</a></li>
-                    </ul>
-                </li>
-                <li>
+
+        <div class="main-header">
+            <div class="header-content">
+                <div class="brand-section">
+                    <h1 class="main-title">Fresh Farm</h1>
+                    <h2 class="main-sub-title">Organics</h2>
+                    <h3 class="main-small-title">Your favourite shop</h3>
+                </div>
+            </div>
+        </div>
+
+      <li>
                     <a href="/cart" class="nav-cart-link" aria-haspopup="true" aria-expanded="false">
                     <i class="fa-solid fa-basket-shopping"></i></a>
                 </li>
@@ -80,6 +60,59 @@
                             Search
                         </button>
                     </form>
+                </li>
+      
+        <div class="action-icons-bar">
+            <div class="action-icons-content">
+                <a href="/cart" class="action-icon-btn" title="View Cart">
+                    <i class="fas fa-basket-shopping"></i>
+                    <span class="cart-count" th:if="${cart != null and !#maps.isEmpty(cart.items)}"
+                          th:text="${cart.items.size()}">0</span>
+                </a>
+
+                <a href="/oauth2/authorization/okta" class="action-icon-btn"
+                   sec:authorize="isAnonymous()" title="Log in">
+                    <i class="fas fa-user"></i>
+                </a>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <ul>
+                <li>
+                    <a href="/" class="nav-link">Our Story</a>
+                </li>
+                <li>
+                    <a class="nav-link" aria-haspopup="true" aria-expanded="false">
+                        Fruits &amp; Vegetables
+                        <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                    </a>
+                    <ul class="dropdown" role="menu">
+                        <li><a href="/fruits" role="menuitem">Fruits</a></li>
+                        <li><a href="/vegetables" role="menuitem">Vegetables</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="nav-link" aria-haspopup="true" aria-expanded="false">Dairy
+                        <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                    </a>
+                    <ul class="dropdown">
+                        <li><a href="/milk">Milk</a></li>
+                        <li><a href="/cheese">Cheese</a></li>
+                        <li><a href="/yoghurt">Yoghurt</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/boxes" class="nav-link">Pre-set Boxes</a>
+                </li>
+                <li>
+                    <a class="nav-link" aria-haspopup="true" aria-expanded="false">Support
+                        <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                    </a>
+                    <ul class="dropdown">
+                        <li><a href="/contact_us">Contact Us</a></li>
+                        <li><a href="/faq">FAQ</a></li>
+                    </ul>
                 </li>
             </ul>
         </nav>
