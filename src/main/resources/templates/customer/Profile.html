@@ -53,7 +53,7 @@
                     <tr th:each="orders : ${orders}">
                         <td>Order REF <span  th:text="${orders.orderId}"></span></td>
                         <td th:text="${orders.orderDate}"></td>
-                        <td><a href="">Click for order details</a></td>
+                        <td><a th:href="@{'/orders/'+${orders.orderId}}">view</a></td>
                     </tr>
                 </table>
             </div>
