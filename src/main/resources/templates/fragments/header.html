@@ -72,6 +72,15 @@
                     <a href="/profile" class="nav-cart-link" aria-haspopup="true" aria-expanded="false">
                         <i class="fa-solid fa-user"></i></a>
                 </li>
+                <li style="list-style:none;">
+                    <form th:action="@{/search}" method="get" style="display:flex;align-items:center;gap:0.4rem;" onsubmit="if(!this.q.value.trim()){return false;}">
+                        <input type="search" name="q" placeholder="Search products…" aria-label="Search"
+                               style="padding:0.3rem 0.5rem; border:1px solid #cbd5e1; border-radius:6px; min-width:180px;">
+                        <button type="submit" style="padding:0.3rem 0.7rem; border-radius:6px; border:1px solid #cbd5e1; background:#fff; cursor:pointer;">
+                            Search
+                        </button>
+                    </form>
+                </li>
             </ul>
         </nav>
     </header>

@@ -703,3 +703,73 @@ footer a {
     color: #1b5e20;
     border: 1px solid #b7e2c7;
 }
+
+/*Product Search display styling */
+/* to display products after search on the webpage */
+.search-section { padding: 1.5rem; }
+.search-subtitle { margin-bottom: 1rem; font-weight: 600; }
+.search-empty { padding: 1rem; background: #fff8e1; border: 1px solid #ffe3a3; border-radius: 10px; }
+
+/* Responsive grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1rem;
+}
+
+/* Cards */
+.product-card {
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 14px;
+    padding: 1rem;
+    box-shadow: 0 1px 2px rgba(0,0,0,.04);
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.product-img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: .5rem;
+    background: #f6f6f6;
+}
+
+.product-title { font-size: 1.05rem; margin: 0; }
+.product-desc { color: #555; font-size: .95rem; margin: 0; }
+.product-price { font-weight: 700; margin-top: .25rem; }
+
+/* Actions row */
+.product-actions {
+    margin-top: auto;
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: .5rem .8rem;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    background: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    line-height: 1;
+    cursor: pointer;
+}
+.btn:hover { background: #f7f7f7; }
+
+.btn-primary {
+    border-color: transparent;
+    background: #0a7;
+    color: #fff;
+}
+.btn-primary:hover { filter: brightness(0.95); }
+
+/* Optional: make forms inline without extra margins */
+.add-to-cart { margin: 0; }
