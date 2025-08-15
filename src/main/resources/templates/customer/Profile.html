@@ -1,61 +1,77 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5" lang="en">
 <head lang="en">
-  <meta charset="UTF-8"/>
-  <title>My FreshFarm Organics</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+    <meta charset="UTF-8"/>
+    <title>My FreshFarm Organics</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
 </head>
 <body>
 <div th:replace="fragments/header :: header"></div>
-<h1 class="page-section-title">My Profile</h1>
 
-<section class="contact-wrap">
-    <div class="contact-card">
-        <div class="contact-grid">
-            <div class="contact-col">
-                <p class="contact-subtitle">Here's the address we have for your orders:</p>
-                <p><span th:text="${profile_name}"></span> <span th:text="${profile_surname}"></span><br>
-                    <span th:text="${addressLine1}"></span><br>
-                    <span th:text="${addressTown}"></span><br>
-                    <span th:text="${addressPostcode}"></span></p>
-                <hr>
-                <p class="contact-subtitle">Need to change your address?</p>
-                <form action="#" th:action="@{/profile}" th:object="${user}" method="post">
-                    <div><center>
-                        <table>
-                            <tr>
-                                <td style="text-align: right">Street name and number:</td>
-                                <td><input type="text" name="addressLine1" /></td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: right">Town:</td>
-                                <td><input type="text" name="TownCity" /></td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: right">Postcode:</td>
-                                <td><input type="text" name="Postcode"></td>
-                            </tr>
-                            <tr>
-                                <td colspan="2"></td>
-                            </tr>
-                            <tr>
-                                <td colspan="2" style="text-align: center"><input class="add-to-basket" type="submit" value="Submit" /> <input type="reset" value="Reset" class="add-to-basket"/></td>
-                            </tr>
-                        </table>
-                    </center></div>
-                </form>
+<section class="profile-container">
+    <h1 class="page-section-title">My Profile</h1>
+
+    <div class="profile-card">
+        <div class="profile-grid">
+            <div class="profile-section">
+                <div class="section-header">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Current Delivery Address</h3>
+                </div>
+
+                <div class="current-address">
+                    <p><span th:text="${profile_name}"></span> <span th:text="${profile_surname}"></span></p>
+                    <p><span th:text="${addressLine1}"></span></p>
+                    <p><span th:text="${addressTown}"></span></p>
+                    <p><span th:text="${addressPostcode}"></span></p>
+                </div>
+
+                <div class="update-section">
+                    <h4>Update Your Address</h4>
+                    <form action="#" th:action="@{/profile}" th:object="${user}" method="post" class="profile-form">
+                        <div class="form-field">
+                            <label for="addressLine1">Street name and number:</label>
+                            <input type="text" id="addressLine1" name="addressLine1" />
+                        </div>
+
+                        <div class="form-field">
+                            <label for="townCity">Town:</label>
+                            <input type="text" id="townCity" name="TownCity" />
+                        </div>
+
+                        <div class="form-field">
+                            <label for="postcode">Postcode:</label>
+                            <input type="text" id="postcode" name="Postcode" />
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Update Address</button>
+                            <button type="reset" class="btn btn-outline">Reset</button>
+                        </div>
+                    </form>
+                </div>
             </div>
 
-            <div class="contacl-col">
-                <div class="contact-subtitle">My Orders</div>
-                <table>
-                    <tr th:each="orders : ${orders}">
-                        <td>Order REF <span  th:text="${orders.orderId}"></span></td>
-                        <td th:text="${orders.orderDate}"></td>
-                        <td><a th:href="@{'/orders/'+${orders.orderId}}">view</a></td>
-                    </tr>
-                </table>
+            <div class="profile-section">
+                <div class="section-header">
+                    <i class="fas fa-shopping-bag"></i>
+                    <h3>My Orders</h3>
+                </div>
+
+                <div class="orders-list">
+                    <div th:if="${#lists.isEmpty(orders)}" class="no-orders">
+                        <p>No orders yet</p>
+                    </div>
+
+                    <div th:each="order : ${orders}" class="order-item">
+                        <div class="order-info">
+                            <span class="order-ref">Order #<span th:text="${order.orderId}"></span></span>
+                            <span class="order-date" th:text="${order.orderDate}"></span>
+                        </div>
+                        <a th:href="@{'/orders/'+${order.orderId}}" class="order-details-link">View Details</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

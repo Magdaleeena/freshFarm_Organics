@@ -56,7 +56,7 @@
 
                 <div class="form-row">
                     <button type="submit" class="add-to-basket">Send message</button>
-                    <button type="reset" class="btn-outline">Clear</button>
+                    <button type="reset" class="clear-btn">Clear</button>
                 </div>
 
                 <div th:if="${contactSuccess}" class="contact-alert contact-alert-success" th:text="${contactSuccess}">
@@ -72,7 +72,7 @@
                     Batley Rd<br/>
                     Wakefield WF2 0SB, United Kingdom<br/>
                     Phone: +44 20 7946 0123<br/>
-                    Email: <a href="mailto:hello@farmfreshorganics.co.uk">hello@farmfreshorganics.co.uk</a>
+                    Email: <a href="mailto:hello@farmfreshorganics.co.uk" class="contact-email">hello@farmfreshorganics.co.uk</a>
                 </p>
 
                 <div class="map-embed" aria-label="Map: Batley Rd, Wakefield WF2 0SB">

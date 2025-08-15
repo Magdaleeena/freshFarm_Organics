@@ -44,30 +44,19 @@
             </div>
         </div>
 
-      <li>
-                    <a href="/cart" class="nav-cart-link" aria-haspopup="true" aria-expanded="false">
-                    <i class="fa-solid fa-basket-shopping"></i></a>
-                </li>
-                <li>
-                    <a href="/profile" class="nav-cart-link" aria-haspopup="true" aria-expanded="false">
-                        <i class="fa-solid fa-user"></i></a>
-                </li>
+        <div class="action-icons-bar">
+            <div class="action-icons-content">
                 <li style="list-style:none;">
-                    <form th:action="@{/search}" method="get" style="display:flex;align-items:center;gap:0.4rem;" onsubmit="if(!this.q.value.trim()){return false;}">
-                        <input type="search" name="q" placeholder="Search products…" aria-label="Search"
-                               style="padding:0.3rem 0.5rem; border:1px solid #cbd5e1; border-radius:6px; min-width:180px;">
-                        <button type="submit" style="padding:0.3rem 0.7rem; border-radius:6px; border:1px solid #cbd5e1; background:#fff; cursor:pointer;">
-                            Search
+                    <form th:action="@{/search}" method="get" style="display:flex;align-items:center;gap:0.4rem;">
+                        <input type="search" name="q" placeholder="Search products…" class="search-input">
+                        <button type="submit" class="search-btn">
+                            <i class="fas fa-search"></i>
                         </button>
                     </form>
                 </li>
-      
-        <div class="action-icons-bar">
-            <div class="action-icons-content">
+
                 <a href="/cart" class="action-icon-btn" title="View Cart">
                     <i class="fas fa-basket-shopping"></i>
-                    <span class="cart-count" th:if="${cart != null and !#maps.isEmpty(cart.items)}"
-                          th:text="${cart.items.size()}">0</span>
                 </a>
 
                 <a href="/oauth2/authorization/okta" class="action-icon-btn"
