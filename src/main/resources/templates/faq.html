@@ -11,19 +11,48 @@
 <div th:replace="fragments/header :: header"></div>
 <section class="faq">
   <h1>Frequently Asked Questions</h1>
+
   <details>
     <summary>When will I receive my order?</summary>
-    <p>Local Orders <br>Order before 2pm Monday to Friday for same-day delivery <br>Order before 12pm Saturday and Sunday for same-day delivery <br><br>National <br>Order before 2pm Monday to Friday for next-day delivery <br>Order before 12pm Saturday and Sunday for next-day delivery</p>
+    <div class="faq-content">
+      <div class="delivery-section">
+        <h4>Local Orders</h4>
+        <ul class="faq-content">
+          <p>Order before 2pm Monday to Friday for same-day delivery<br>
+          Order before 12pm Saturday and Sunday for same-day delivery</p>
+        </ul>
+      </div>
+
+      <div class="delivery-section">
+        <h4>National Orders</h4>
+        <ul>
+          <p> Order before 2pm Monday to Friday for next-day delivery<br>
+          Order before 12pm Saturday and Sunday for next-day delivery</p>
+        </ul>
+      </div>
+    </div>
   </details>
 
   <details>
     <summary>What payment methods can I use?</summary>
-    <p>We accept all major debit and credit cards, PayPal and bank transfers.</p>
+    <div class="faq-content">
+      <p>We accept all major debit and credit cards, PayPal and bank transfers.</p>
+    </div>
   </details>
 
   <details>
-    <summary>What if there is a problem?</summary>
-    <p>We want you to be 100% satisfied with your delivery. We make lots of deliveries every week and have lots of happy customers.<br> If for any reason you are not, please let us know and we will do everything we can to resolve the matter for you. <br>To help us investigate, please take a picture of your delivery and send it to hello@farmfreshorganics.co.uk.</p>
+    <summary>What if there is a problem with my delivery?</summary>
+    <div class="faq-content">
+      <p>We want you to be 100% satisfied with your delivery. If for any reason you are not, please let us know and we will do everything we can to resolve the matter for you.</p>
+
+      <div class="problem-resolution">
+        <h4>To help us investigate:</h4>
+        <ol>
+          <li>Take a picture of your delivery</li>
+          <li>Send it to <a href="mailto:hello@farmfreshorganics.co.uk">hello@farmfreshorganics.co.uk</a></li>
+        </ol>
+      </div>
+    </div>
   </details>
 </section>
 <div th:replace="fragments/footer :: footer"></div>

@@ -2,30 +2,36 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head lang="en">
     <meta charset="UTF-8"/>
-    <title>Checkout</title>
+    <title>Order Details</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="/css/styles.css" />
 </head>
 <body>
 <div th:replace="fragments/header :: header"></div>
-<div class="checkout-grid">
-    <div class="checkout-card order-summary-card">
-        <div class="card-header">
-            <h2><i class="fas fa-shopping-bag"></i> Order Summary</h2>
-        </div>
-        <div class="order-items">
-            <div class="order-item">
-                <div class="item-details">
-                    <span class="item-name" th:text="${product.productName}">Product Name</span>
-                    <span class="item-price">£<span th:text="${product.unitPrice}">0.00</span></span>
-                </div>
-                <div class="item-quantity">
-                    <span class="qty-badge">1</span>
+
+<div class="order-page-container">
+    <h1 class="page-section-title">Order Details</h1>
+
+    <div class="order-summary-container">
+        <div class="checkout-card order-summary-card">
+            <div class="card-header">
+                <h2><i class="fas fa-shopping-bag"></i> Order Summary</h2>
+            </div>
+            <div class="order-items">
+                <div class="order-item">
+                    <div class="item-details">
+                        <span class="item-name" th:text="${product.productName}">Product Name</span>
+                        <span class="item-price">£<span th:text="${product.unitPrice}">0.00</span></span>
+                    </div>
+                    <div class="item-quantity">
+                        <span class="qty-badge">1</span>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 <div th:replace="fragments/footer :: footer"></div>
 </body>
 </html>
