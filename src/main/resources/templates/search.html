@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Search • freshFarmOrganics</title>
+  <link rel="stylesheet" href="/css/styles.css"/>
+</head>
+<body>
+<div th:replace="fragments/header :: header"></div>
+
+<section class="search-section">
+  <div>
+    <p class="search-subtitle" th:if="${q != null and !#strings.isEmpty(q)}">
+      Results for “<span th:text="${q}">q</span>”
+    </p>
+  </div>
+
+  <!-- No results -->
+  <div class="search-empty"
+       th:if="${results != null
+               and results.totalElements == 0
+               and q != null
+               and !#strings.isEmpty(q)}">
+    No products found for "<span th:text="${q}">q</span>".
+  </div>
+
+  <!-- Results grid -->
+  <div th:if="${results != null and results.totalElements > 0}">
+    <div class="product-grid">
+      <article class="product-card" th:each="p : ${results.content}">
+
+        <img th:if="${p.imageUrl != null}" th:src="${p.imageUrl}" alt="" class="product-img"/>
+
+        <h3 class="product-title" th:text="${p.productName}">Product Name</h3>
+        <p class="product-desc" th:text="${p.description}">Description</p>
+        <p class="product-price">
+          £<span th:text="${#numbers.formatDecimal(p.unitPrice, 1, 'NONE', 2, 'POINT')}">0.00</span>
+        </p>
+
+        <!-- Add to Basket -->
+        <form th:action="@{/cart/add}" method="post" class="add-form">
+          <input type="hidden" name="productId" th:value="${p.productId}"/>
+          <label class="qty-label">
+            <input type="number" name="qty" min="1" value="1" class="qty-input"/>
+          </label>
+          <!-- Spring Security CSRF (only if enabled) -->
+          <input type="hidden" th:if="${_csrf != null}" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+          <button type="submit" class="add-to-basket">Add to Basket</button>
+        </form>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div th:replace="fragments/footer :: footer"></div>
+</body>
+</html>
+
+
+
+
+
+
