@@ -36,8 +36,8 @@ public class AddressController {
         Optional<Customer> customerLookup = customerRepository.findById(user_id);
         System.out.println(customerLookup);
 
-        String address_line1 = "5 Westbrook";
-        String postcode = "DL3 6TD";
+        String address_line1 = "";
+        String postcode = "";
         JsonObject queryObject = googleAddress.setAddress_url(address_line1, postcode);
         Gson gson = new Gson();
         System.out.println("Pre-toJson: " + googleAddress);
@@ -45,7 +45,7 @@ public class AddressController {
         System.out.println(jsonRequest);
 
         HttpRequest postRequest = HttpRequest.newBuilder()
-                .uri(new URI("https://addressvalidation.googleapis.com/v1:validateAddress?key=AIzaSyBgrW1qCej7Y8N2cn0aMToQHxK7A4Ws5pM"))
+                .uri(new URI("https://addressvalidation.googleapis.com/v1:validateAddress?key="))
                 .POST(HttpRequest.BodyPublishers.ofString(jsonRequest))
                 .build();
 
@@ -60,14 +60,14 @@ public class AddressController {
     @PostMapping
     public String sendAddress() throws URISyntaxException, IOException, InterruptedException {
         GoogleAddress googleAddress = new GoogleAddress();
-        JsonObject queryObject = googleAddress.setAddress_url("5 Westbrook", "DL3 6TD");
+        JsonObject queryObject = googleAddress.setAddress_url("", "");
         Gson gson = new Gson();
         System.out.println("Pre-toJson: " + googleAddress);
         String jsonRequest = gson.toJson(queryObject);
         System.out.println(jsonRequest);
 
         HttpRequest postRequest = HttpRequest.newBuilder()
-                .uri(new URI("https://addressvalidation.googleapis.com/v1:validateAddress?key=AIzaSyBgrW1qCej7Y8N2cn0aMToQHxK7A4Ws5pM"))
+                .uri(new URI("https://addressvalidation.googleapis.com/v1:validateAddress?key="))
                 .POST(HttpRequest.BodyPublishers.ofString(jsonRequest))
                 .build();
 
