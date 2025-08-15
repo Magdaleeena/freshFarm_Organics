@@ -3,8 +3,10 @@ package com.example.freshFarm.controller;
 import com.example.freshFarm.dto.ProfileForm;
 import com.example.freshFarm.model.Customer;
 import com.example.freshFarm.model.Order;
+import com.example.freshFarm.model.Product;
 import com.example.freshFarm.repository.CustomerRepository;
 import com.example.freshFarm.repository.OrderRepository;
+import com.example.freshFarm.repository.ProductRepository;
 import com.example.freshFarm.service.ProfileService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +17,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -30,6 +33,9 @@ public class ProfileController {
 
     @Autowired
     OrderRepository orderRepository;
+
+    @Autowired
+    ProductRepository productRepository;
 
     @Autowired
     ProfileService profileService;
@@ -102,5 +108,20 @@ public class ProfileController {
         customerRepository.save(oldUser.get());
 
         return new RedirectView("/profile");
+    }
+
+    @GetMapping("/orders/{id}")
+    public ModelAndView userPage(@PathVariable Long id){
+        Optional<Order> order = orderRepository.findById(id);
+
+        ModelAndView orderView = new ModelAndView("customer/orders");
+
+        String orderItems = order.get().getOrderItems();
+
+        Optional<Product> product = productRepository.findById(Long.valueOf(22));
+
+        orderView.addObject("product", product.get());
+
+        return orderView;
     }
 }
